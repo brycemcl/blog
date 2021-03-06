@@ -6,7 +6,7 @@ description: 'We take a look at how the Express family came to be and how they a
 
 ## What is Express?
 
-According to the Express team, [Express is a](https://expressjs.com/) "fast, unopinionated, minimalist web framework for Node.js".
+According to the Express team, Express is a ["fast, unopinionated, minimalist web framework for Node.js".](https://expressjs.com/) 
 Let's break that down for a second and talk about what that means.
 
 ### Fast
@@ -28,7 +28,7 @@ When a piece of software is minimalist, it tries to do one thing well.
 A framework is a skeleton that you can build a project around.
 There are frameworks built on Express that provide more features and opinions.
 You can see the list that the Express team has complied [here.](http://Expressjs.com/en/resources/frameworks.html)
-For the rest of this post, we are going to be focussing on "fast, unopinionated, minimalist web frameworks for Node.js".
+For the rest of this post, we are going to be focussing on ["fast, unopinionated, minimalist web framework for Node.js".](https://expressjs.com/)
 
 ## Why would you use Express?
 
@@ -95,13 +95,13 @@ Connect has not received a new release since May 17, 2019.
 
 ### [What is Koa](https://Koajs.com/)
 
-"Koa is a new web framework designed by the team behind Express, which aims to be a smaller, more expressive, and more robust foundation for web applications and APIs." "Philosophically, Koa aims to 'fix and replace Node.js', whereas Express 'augments Node.js'." [-Express team](https://github.com/Koajs/Koa/blob/master/docs/Koa-vs-Express.md)
+["Koa is a new web framework designed by the team behind Express, which aims to be a smaller, more expressive, and more robust foundation for web applications and APIs."](https://Koajs.com/) ["Philosophically, Koa aims to 'fix and replace Node.js', whereas Express 'augments Node.js'." -Express team](https://github.com/Koajs/Koa/blob/master/docs/Koa-vs-Express.md)
 
 #### Dependency graph for Koa
 
-Node.js's built-in HTTP server &rightarrow; Koa
+Node.js's built-in HTTP server &rightarrow; Koa &rightarrow; Koa middleware
 
-In contrast to Express and Connect, Koa doesn't use the req and res objects from Node.js's built-in HTTP server but it's own abstraction on them: ctx.request and ctx.response.
+In contrast to Express and Connect, Koa doesn't use the req and res objects from Node.js's built-in HTTP server but it's own abstraction on them: ctx.request and ctx.response. Express/Connect middleware is also not compatible with Koa. Koa's has a different ecosystem of middleware.
 
 #### Why isn't Koa the next version of Express or Connect?
 
