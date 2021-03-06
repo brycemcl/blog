@@ -1,57 +1,57 @@
 module.exports = {
   siteMetadata: {
-    title: "Musings by Bryce",
+    title: 'Musings by Bryce',
     author: {
-      name: "Bryce McLachlan",
+      name: 'Bryce McLachlan',
       summary:
-        "a green field programmer demonstrating what he can do. He/him self-referential (cassgender). Lives in British Columbia, Canada.",
+        'a green field programmer demonstrating what he can do. He/him self-referential (cassgender). Lives in British Columbia, Canada.'
     },
-    description: "A green field programmer demonstrating what he can do.",
-    siteUrl: "https://brycemclachlan.me/",
+    description: 'A green field programmer demonstrating what he can do.',
+    siteUrl: 'https://brycemclachlan.me/',
     social: {
-      twitter: "brycemclachlan",
-    },
+      twitter: 'brycemclachlan'
+    }
   },
   plugins: [
-    "gatsby-plugin-image",
+    'gatsby-plugin-image',
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/content/blog`,
-        name: "blog",
-      },
+        name: 'blog'
+      }
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "images",
-        path: `${__dirname}/src/images`,
-      },
+        name: 'images',
+        path: `${__dirname}/src/images`
+      }
     },
     {
-      resolve: "gatsby-transformer-remark",
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           {
-            resolve: "gatsby-remark-images",
+            resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 630,
-            },
+              maxWidth: 630
+            }
           },
           {
-            resolve: "gatsby-remark-responsive-iframe",
+            resolve: 'gatsby-remark-responsive-iframe',
             options: {
-              wrapperStyle: "margin-bottom: 1.0725rem",
-            },
+              wrapperStyle: 'margin-bottom: 1.0725rem'
+            }
           },
-          "gatsby-remark-prismjs",
-          "gatsby-remark-copy-linked-files",
-          "gatsby-remark-smartypants",
-        ],
-      },
+          'gatsby-remark-prismjs',
+          'gatsby-remark-copy-linked-files',
+          'gatsby-remark-smartypants'
+        ]
+      }
     },
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-sharp",
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
     //   options: {
@@ -59,7 +59,7 @@ module.exports = {
     //   },
     // },
     {
-      resolve: "gatsby-plugin-feed",
+      resolve: 'gatsby-plugin-feed',
       options: {
         query: `
           {
@@ -82,7 +82,7 @@ module.exports = {
                   date: node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + node.fields.slug,
                   guid: site.siteMetadata.siteUrl + node.fields.slug,
-                  custom_elements: [{ "content:encoded": node.html }],
+                  custom_elements: [{ 'content:encoded': node.html }]
                 })
               })
             },
@@ -105,27 +105,27 @@ module.exports = {
                 }
               }
             `,
-            output: "/rss.xml",
-          },
-        ],
-      },
+            output: '/rss.xml'
+          }
+        ]
+      }
     },
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        name: "Musings by Bryce",
-        short_name: "Musings",
-        start_url: "/",
-        background_color: "#ffffff",
-        theme_color: "#663399",
-        display: "minimal-ui",
-        icon: "src/images/icon.png", // This path is relative to the root of the site.
-      },
+        name: 'Musings by Bryce',
+        short_name: 'Musings',
+        start_url: '/',
+        background_color: '#ffffff',
+        theme_color: '#663399',
+        display: 'minimal-ui',
+        icon: 'src/images/icon.png' // This path is relative to the root of the site.
+      }
     },
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-gatsby-cloud",
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-gatsby-cloud'
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-  ],
+  ]
 }
