@@ -37,12 +37,18 @@ For the rest of this post, we are going to be focussing on ["fast, unopinionated
 > Ted, a project manager, has a website that doesn't have a backend to save user state yet.
 > Ted's team consists of front end developers who know Javascript.
 > Ted tasks Phil (one of his developers) with figuring out how to implement a backend.
+>
+>
 > Phil reads about this new technology(it's 2010 in this story btw) called Node.js that let's him write javascript and have it run on the server.
 > He start looking for how to implement a HTTP server in Node.js.
 > He starts implementing the backend using backend using the http package from the standard library of Node.
 > Development is slow as the standard library is low level and designed to be a building blocks for higher level abstractions.
+>
+>
 > One of his fellow developers, Lem, tell him about this new framework called Express.
-> They audit the code of this framework and like how this framework structures writing HTTP servers and provides abstractions over the Node.js http library.
+> They audit the code of this framework and like how this framework structures writing HTTP servers and provides abstractions over the Node.js http standard library.
+>
+>
 > Development speeds up as they are writing less boiler plate code and are able to concentrate on the business logic.
 > As the project evolves the new developers are able to be onboarded faster then if they wrote all of the logic in house because their Express backend follows a standard layout.
 > As they are implementing new features like password hashing(they had a security consultant tell them they need this, Phil and Lem were just front end developers after all) they discover more features that that are common across backends are already implemented by middleware.
